@@ -12,10 +12,10 @@ Clone this repo into your components folder, then copy and paste the color defin
 
 ## Standards
 
--   All components use the same color and size types found in types.ts
--   I chose not to centralize color definitions to prevent heavily polluting the namespace. However given that the text fields (number, area, and normal) all share classes, and the checkboxes also do I need a better standard for this.
--   Components that "choose" accept a "choice" and "setChoice" prop
--   Components that "set" accept a "value" and "setValue" prop
+-   All components use the same color and size types found in types.ts as configuration props. Some componenets do not have multiple colors, they all have sizes though.
+-   I chose not to centralize the component Tailwind color definitions to prevent heavily polluting the namespace. However given that the text fields (number, area, and normal) all share classes, and the checkboxes also do I need a better standard for this.
+-   Components that "choose" accept a "choice" and "setChoice" prop for updating your state variable
+-   Components that "set" accept a "value" and "setValue" prop for updating your state variable
 
 ## Issues
 
