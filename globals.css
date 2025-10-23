@@ -1,0 +1,62 @@
+:root {
+    /* Backgrounds */
+    --color-background: #212326;
+    --color-card-primary: #2a2d32;
+    --color-card-secondary: #34373c;
+
+    /* Header Footer */
+    --color-header: #16181c;
+    --color-footer: #16181c;
+
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #ededed;
+    --color-text-muted: #aaaaaa;
+    --color-text-inverse: #0a0a0a;
+
+    /* Borders / UI dividers */
+    --color-border: #3c3f44;
+    --color-border-hover: #5a5f66;
+
+    /* Accent / Interaction */
+    --color-accent: #4a90e2;
+    --color-accent-glow: rgba(74, 144, 226, 0.25);
+
+    /* Blue */
+    --color-blue: #4a6cff;
+    --color-blue-hover: #3a5aee;
+    --color-blue-active: #2f4ecf;
+    --color-blue-disabled: #a0b3ff;
+    --color-blue-overlay-text: #ffffff;
+    --color-blue-border: #3a5aee;
+
+    /* Red  */
+    --color-red: #ff4d4d;
+    --color-red-hover: #ee3d3d;
+    --color-red-active: #cc2e2e;
+    --color-red-disabled: #ffb3b3;
+    --color-red-overlay-text: #ffffff;
+    --color-red-border: #ee3d3d;
+
+    /* Green */
+    --color-green: #2ca32c;
+    --color-green-hover: #248f24;
+    --color-green-active: #1e7a1e;
+    --color-green-disabled: #a0d1a0;
+    --color-green-overlay-text: #ffffff;
+    --color-green-border: #248f24;
+
+    /* Plain */
+    --color-plain: #3a3d42;
+    --color-plain-hover: #4a4d52;
+    --color-plain-active: #2f3237;
+    --color-plain-disabled: #5a5d62;
+    --color-plain-overlay-text: #e5e7eb;
+    --color-plain-border: #4a4d52;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+}
