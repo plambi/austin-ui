@@ -1,0 +1,75 @@
+import React from "react";
+import { AustinUISize, AustinUISizeClassMap } from "../types";
+import { Label } from "./Label";
+
+interface NumberFieldProps
+    extends Omit<
+        React.InputHTMLAttributes<HTMLInputElement>,
+        "value" | "onChange" | "size" | "type"
+    > {
+    size?: AustinUISize;
+    overrideWidthFull?: boolean;
+    label?: string;
+    value: number;
+    setValue: (n: number) => void;
+    className?: string;
+    style?: React.CSSProperties;
+}
+
+export function NumberField({
+    label,
+    overrideWidthFull = false,
+    value,
+    setValue,
+    size = "normal",
+    className = "",
+    style,
+    ...rest
+}: NumberFieldProps) {
+    const baseClass = `
+        ${!overrideWidthFull ? "w-full" : ""}
+        text-[var(--color-text-primary)]
+        focus:outline-none
+        transition-all duration-200
+        placeholder-[var(--color-text-muted)]
+
+        bg-[var(--color-plain)]
+        hover:bg-[var(--color-plain-hover)]
+        disabled:bg-[var(--color-plain-disabled)]
+        border-[var(--color-plain-border)]
+        appearance-none
+    `;
+
+    const numberSizes: AustinUISizeClassMap = {
+        small: "py-1 px-3 text-sm rounded-md",
+        normal: "py-2 px-4 text-md rounded-lg",
+        large: "py-3 px-6 text-lg rounded-lg",
+    } as const;
+
+    const inputId = React.useId();
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const numValue = parseFloat(e.target.value);
+        setValue(isNaN(numValue) ? 0 : numValue);
+    };
+
+    return (
+        <div className="flex flex-col gap-1 w-full">
+            {label && <Label id={inputId} size={size} text={label} />}
+
+            <input
+                id={inputId}
+                type="number"
+                value={value}
+                onChange={handleChange}
+                className={`
+                    ${baseClass}
+                    ${numberSizes[size]}
+                    ${className}
+                `}
+                style={style}
+                {...rest}
+            />
+        </div>
+    );
+}
