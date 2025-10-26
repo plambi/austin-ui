@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { SectionContainer } from "../containers/SectionContainer";
 import { Select } from "../core/Select";

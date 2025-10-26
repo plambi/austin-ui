@@ -1,3 +1,5 @@
+"use client";
+
 import { PageContainer } from "../containers/PageContainer";
 import { ButtonShowcase } from "./ButtonShowcase";
 import { SelectShowcase } from "./SelectShowcase";

@@ -1,3 +1,5 @@
+"use client";
+
 import { AustinUISize, AustinUISizeClassMap } from "../types";
 import React from "react";
 import { Label } from "./Label";
