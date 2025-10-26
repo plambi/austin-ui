@@ -18,6 +18,7 @@ interface ButtonProps
     overrideWidthFull?: boolean;
     type?: "button" | "submit" | "reset";
     formAction?: (formData: FormData) => Promise<void>;
+    disableHoverEffects?: boolean;
     children?: React.ReactNode;
 }
 
@@ -31,11 +32,13 @@ export function Button({
     className = "",
     type = "button",
     formAction,
+    disableHoverEffects = false,
     ...rest
 }: ButtonProps) {
-    const baseClasses = `${
-        !overrideWidthFull ? "w-full" : ""
-    } font-medium transition-all duration-200 focus:outline-none hover:scale-[1.02]`;
+    const baseClasses = `${!overrideWidthFull ? "w-full" : ""} 
+        ${disableHoverEffects ? "" : "hover:scale-[1.02]"}
+        font-medium transition-all duration-200 
+        focus:outline-none cursor-pointer`;
 
     const buttonColors: AustinUIColorClassMap = {
         red: `

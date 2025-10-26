@@ -8,10 +8,10 @@ interface DropdownMenuProps {
     menuClassName?: string;
 }
 
-export default function DropdownMenu({
+export function DropdownMenu({
     trigger,
     children,
-    position = "left",
+    position = "center",
     className = "",
     menuClassName = "",
 }: DropdownMenuProps) {
@@ -38,9 +38,7 @@ export default function DropdownMenu({
     useEffect(() => {
         function handleEscapeKey(event: KeyboardEvent) {
             if (event.key === "Escape") {
-                if (isOpen) {
-                    setIsOpen(false);
-                }
+                setIsOpen(false);
             }
         }
 
