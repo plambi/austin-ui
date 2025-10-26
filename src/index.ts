@@ -20,6 +20,7 @@ export * from "./functional/CheckboxGroup";
 export * from "./functional/Loading";
 export * from "./functional/Pagination";
 export * from "./functional/RadioGroup";
+export * from "./functional/DropdownMenu";
 
 // Showcase
 export * from "./showcase/UIShowcase";
