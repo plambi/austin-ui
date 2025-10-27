@@ -8,6 +8,7 @@ type SectionContainerProps = {
     headerAlign?: "center" | "left";
     hideContent?: boolean;
     showUnderline?: boolean;
+    headerNode?: React.ReactNode;
 };
 
 export function SectionContainer({
@@ -18,6 +19,7 @@ export function SectionContainer({
     headerAlign = "center",
     hideContent,
     showUnderline = false,
+    headerNode,
 }: SectionContainerProps) {
     return (
         <div className={className}>
@@ -26,7 +28,11 @@ export function SectionContainer({
                     headerAlign === "center" ? "items-center" : "items-start"
                 }`}
             >
-                <h2 className="text-xl font-semibold mb-2">{title}</h2>
+                <div className="flex flex-row gap-3 mb-2">
+                    <h2 className="text-xl font-semibold">{title}</h2>
+                    {headerNode}
+                </div>
+
                 {title && showUnderline && (
                     <hr
                         className="w-full border-1 border-t border-solid mb-4"

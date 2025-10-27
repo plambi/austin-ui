@@ -16,6 +16,7 @@ interface TextAreaProps
     setValue: (val: string) => void;
     className?: string;
     style?: React.CSSProperties;
+    endNode?: React.ReactNode;
 }
 
 export function TextArea({
@@ -26,6 +27,7 @@ export function TextArea({
     size = "normal",
     className = "",
     style,
+    endNode,
     ...rest
 }: TextAreaProps) {
     const baseClass = `
@@ -56,22 +58,20 @@ export function TextArea({
     return (
         <div className="flex flex-col gap-1 w-full">
             {label && <Label id={inputId} size={size} text={label} />}
-
-            <textarea
-                id={inputId}
-                type="text"
-                value={value}
-                onChange={handleChange}
-                className={`
-                    ${baseClass}
-                    ${textSizes[size]}
-                    ${className}
-        `}
-                style={{
-                    ...style,
-                }}
-                {...rest}
-            />
+            <div className="flex flex-row items-center gap-3">
+                <textarea
+                    id={inputId}
+                    type="text"
+                    value={value}
+                    onChange={handleChange}
+                    className={`${baseClass} ${textSizes[size]} ${className}`}
+                    style={{
+                        ...style,
+                    }}
+                    {...rest}
+                />
+                {endNode}
+            </div>
         </div>
     );
 }

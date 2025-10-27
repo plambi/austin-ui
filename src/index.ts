@@ -5,6 +5,7 @@ export * from "./cards/IconCard";
 // Containers
 export * from "./containers/PageContainer";
 export * from "./containers/SectionContainer";
+export * from "./containers/Modal";
 
 // Core
 export * from "./core/Button";

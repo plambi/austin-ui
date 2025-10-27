@@ -16,6 +16,7 @@ interface NumberFieldProps
     setValue: (n: number) => void;
     className?: string;
     style?: React.CSSProperties;
+    endNode?: React.ReactNode;
 }
 
 export function NumberField({
@@ -26,6 +27,7 @@ export function NumberField({
     size = "normal",
     className = "",
     style,
+    endNode,
     ...rest
 }: NumberFieldProps) {
     const baseClass = `
@@ -58,20 +60,18 @@ export function NumberField({
     return (
         <div className="flex flex-col gap-1 w-full">
             {label && <Label id={inputId} size={size} text={label} />}
-
-            <input
-                id={inputId}
-                type="number"
-                value={value}
-                onChange={handleChange}
-                className={`
-                    ${baseClass}
-                    ${numberSizes[size]}
-                    ${className}
-                `}
-                style={style}
-                {...rest}
-            />
+            <div className="flex flex-row items-center gap-3">
+                <input
+                    id={inputId}
+                    type="number"
+                    value={value}
+                    onChange={handleChange}
+                    className={`${baseClass} ${numberSizes[size]} ${className}`}
+                    style={style}
+                    {...rest}
+                />
+                {endNode}
+            </div>
         </div>
     );
 }
