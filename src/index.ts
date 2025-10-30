@@ -22,6 +22,7 @@ export * from "./functional/Loading";
 export * from "./functional/Pagination";
 export * from "./functional/RadioGroup";
 export * from "./functional/DropdownMenu";
+export * from "./functional/Table";
 
 // Showcase
 export * from "./showcase/UIShowcase";

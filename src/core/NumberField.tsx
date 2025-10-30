@@ -12,8 +12,8 @@ interface NumberFieldProps
     size?: AustinUISize;
     overrideWidthFull?: boolean;
     label?: string;
-    value: number;
-    setValue: (n: number) => void;
+    value: string;
+    setValue: (n: string) => void;
     className?: string;
     style?: React.CSSProperties;
     endNode?: React.ReactNode;
@@ -53,8 +53,7 @@ export function NumberField({
     const inputId = React.useId();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const numValue = parseFloat(e.target.value);
-        setValue(isNaN(numValue) ? 0 : numValue);
+        setValue(e.target.value);
     };
 
     return (

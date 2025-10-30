@@ -28,5 +28,4 @@ Then pull changes using
 
 -   Remove duplicate definitions for checkbox color and size classes
 -   Remove duplicate definitions for colors, and size of text, area, and number fields
--   Number field does not handle negatives
 -   CheckboxGroup and RadioGroup !compact spacing has incorrect click area
