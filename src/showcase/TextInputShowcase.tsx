@@ -8,7 +8,7 @@ import { NumberField } from "../core/NumberField";
 
 export function TextInputShowcase() {
     const [text, setText] = useState<string>("");
-    const [number, setNumber] = useState<number>(0);
+    const [number, setNumber] = useState<string>("0");
 
     return (
         <SectionContainer
