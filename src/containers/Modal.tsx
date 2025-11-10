@@ -25,12 +25,11 @@ export function Modal({
 
     return (
         <div
-            className={`fixed inset-0 z-50 flex items-center justify-center ${overlayClassName}`}
+            className={`fixed inset-0 z-50 flex items-center justify-center overflow-hidden h-dvh ${overlayClassName}`}
         >
             {/* Overlay */}
             <div
-                className="absolute inset-0 bg-black"
-                style={{ opacity: 0.5 }}
+                className="absolute top-0 left-0 w-full h-full bg-black opacity-50"
                 onClick={onClose}
             />
 
@@ -40,8 +39,8 @@ export function Modal({
                 relative bg-[var(--color-card-primary)] border border-[var(--color-border)]
                 rounded-lg shadow-lg max-w-lg w-full
                 mx-4 p-1
-                ${className}
-            `}
+            ${className}
+        `}
             >
                 <div className="flex flex-col gap-3 ">
                     {title && (
