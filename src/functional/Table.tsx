@@ -25,13 +25,13 @@ export function Table({ data, functionColumn }: TableProps) {
                     {headers.map((header) => (
                         <th
                             key={`table-header-${header}`}
-                            className="px-4 py-2 text-left text-sm font-semibold"
+                            className="px-2 md:px-4 py-2 text-left text-sm font-semibold"
                         >
                             {header}
                         </th>
                     ))}
                     {functionColumn && (
-                        <th className="px-4 py-2 text-left text-sm font-semibold">
+                        <th className="px-2 md:px-4 py-2 text-left text-sm font-semibold">
                             {functionColumn.header}
                         </th>
                     )}
@@ -43,7 +43,7 @@ export function Table({ data, functionColumn }: TableProps) {
                         {headers.map((header) => (
                             <td
                                 key={`table-header-${header}-entry-${index}`}
-                                className={`px-4 py-2 text-sm ${
+                                className={`px-2 md:px-4 py-2 text-sm ${
                                     index < longestListLength - 1
                                         ? "border-[var(--color-border)] border-b"
                                         : ""
@@ -54,7 +54,7 @@ export function Table({ data, functionColumn }: TableProps) {
                         ))}
                         {functionColumn && (
                             <td
-                                className={`px-4 py-2 text-sm ${
+                                className={`px-2 md:px-4 py-2 text-sm ${
                                     index < longestListLength - 1
                                         ? "border-[var(--color-border)] border-b"
                                         : ""
