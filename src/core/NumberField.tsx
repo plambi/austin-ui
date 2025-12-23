@@ -56,7 +56,7 @@ export function NumberField({
         setValue(e.target.value);
     };
 
-    return (
+    return label || endNode ? (
         <div className="flex flex-col gap-1 w-full">
             {label && <Label id={inputId} size={size} text={label} />}
             <div className="flex flex-row items-center gap-3">
@@ -72,5 +72,15 @@ export function NumberField({
                 {endNode}
             </div>
         </div>
+    ) : (
+        <input
+            id={inputId}
+            type="number"
+            value={value}
+            onChange={handleChange}
+            className={`${baseClass} ${numberSizes[size]} ${className}`}
+            style={style}
+            {...rest}
+        />
     );
 }
