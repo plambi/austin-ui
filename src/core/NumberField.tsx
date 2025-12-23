@@ -78,7 +78,7 @@ export function NumberField({
             type="number"
             value={value}
             onChange={handleChange}
-            className={`${baseClass} ${numberSizes[size]} ${className}`}
+            className={`${baseClass} ${numberSizes[size]} no-spinner ${className}`}
             style={style}
             {...rest}
         />
