@@ -23,6 +23,7 @@ export * from "./functional/Pagination";
 export * from "./functional/RadioGroup";
 export * from "./functional/DropdownMenu";
 export * from "./functional/Table";
+export * from "./functional/QuantitySpecification";
 
 // Showcase
 export * from "./showcase/UIShowcase";
