@@ -64,8 +64,9 @@ export function DropdownMenu({
             {/* Dropdown Menu */}
             {isOpen && (
                 <div
+                    onClick={(e) => e.stopPropagation()}
                     className={`
-            absolute mt-2 min-w-[200px] z-50
+            absolute mt-2 min-w-[200px] z-50 cursor-default
             rounded-lg shadow-lg overflow-hidden animate-in fade-in-0 zoom-in-95
             ${positionClasses[position]}
             ${menuClassName}

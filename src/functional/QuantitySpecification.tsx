@@ -36,7 +36,8 @@ export default function QuantitySpecification({
         large: "w-6 h-6",
     };
 
-    const iconContainerBaseClass = "rounded-xl transition-all duration-200";
+    const iconContainerBaseClass =
+        "cursor-pointer rounded-xl transition-all duration-200";
 
     const iconContainerClass: AustinUISizeClassMap = {
         small: `p-1 ${iconContainerBaseClass}`,
