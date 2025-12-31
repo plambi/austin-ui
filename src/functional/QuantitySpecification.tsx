@@ -18,7 +18,7 @@ interface QuantitySpecificationProps
     inputClassName?: string;
 }
 
-export default function QuantitySpecification({
+export function QuantitySpecification({
     value,
     setValue,
     min,

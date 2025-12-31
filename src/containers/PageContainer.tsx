@@ -27,9 +27,7 @@ export function PageContainer({
                         <div className="flex-shrink-0">{leftTitleNode}</div>
 
                         {title && (
-                            <h1 className="mt-4 absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold">
-                                {title}
-                            </h1>
+                            <h1 className={`page-container-header`}>{title}</h1>
                         )}
 
                         <div className="flex-shrink-0">{rightTitleNode}</div>

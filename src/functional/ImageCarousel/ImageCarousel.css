@@ -1,0 +1,59 @@
+/* react-responsive-carousel Styling */
+.control-dots {
+    bottom: 20px !important;
+}
+
+.control-dots .dot {
+    box-shadow: none !important;
+    background: #fff !important;
+    opacity: 0.9;
+    width: 10px !important;
+    height: 10px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.control-dots .dot.selected {
+    opacity: 1;
+    width: 30px !important;
+    border-radius: 5px !important;
+}
+
+/* Make arrows look cleaner */
+.carousel .control-arrow {
+    background: rgba(0, 0, 0, 0.7) !important;
+    height: 50px;
+    width: 50px;
+    top: 50% !important;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    margin: 0 10px !important;
+    opacity: 0.8 !important;
+}
+
+.carousel .control-arrow:hover {
+    background: rgba(0, 0, 0, 0.85) !important;
+    opacity: 1 !important;
+}
+
+/* Base thumb */
+.carousel .thumb {
+    box-sizing: border-box;
+    border: none !important;
+    outline: none !important;
+
+    /* Safari-specific */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.carousel .thumb .thumb:focus .thumb.selected .thumbs.animated {
+    border: none !important;
+    outline: none !important;
+}
+
+.carousel .thumb.selected {
+    scale: 1.05;
+}
+
+.carousel .thumb:not(.selected) {
+    scale: 0.95;
+}

@@ -24,6 +24,9 @@ export * from "./functional/RadioGroup";
 export * from "./functional/DropdownMenu";
 export * from "./functional/Table";
 export * from "./functional/QuantitySpecification";
+export * from "./functional/ImageCarousel/ImageCarousel";
+export * from "./functional/Markdown/Markdown";
 
 // Showcase
 export * from "./showcase/UIShowcase";
+export * from "./functional/Markdown/MarkdownShowcase";

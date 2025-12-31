@@ -1,0 +1,70 @@
+.markdown {
+    max-width: 700px;
+    /* margin: 2rem auto; */
+    /* padding: 0 1rem; */
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-family: system-ui, sans-serif;
+}
+
+/* Headings */
+.markdown h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.markdown h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.markdown h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.markdown code {
+    background: var(--color-card-primary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95em;
+}
+
+/* Paragraphs */
+.markdown p {
+    margin-bottom: 1rem;
+}
+
+/* Links */
+.markdown a {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+/* Code blocks */
+.markdown pre {
+    background: var(--color-card-primary);
+    color: #f7fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+/* Unordered Lists */
+.markdown ul {
+    list-style-type: disc; /* This shows the default bullet (•) */
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.markdown li {
+    margin-bottom: 0.5rem;
+}
