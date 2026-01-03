@@ -65,7 +65,7 @@ export function TextField({
                     type="text"
                     value={value}
                     onChange={handleChange}
-                    className={`${baseClass} ${textSizes[size]} ${className}`}
+                    className={`aui-text-field-input ${baseClass} ${textSizes[size]} ${className}`}
                     style={{
                         ...style,
                     }}

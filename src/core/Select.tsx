@@ -53,6 +53,7 @@ export function Select({
                 value={choice}
                 onChange={handleChange}
                 className={`
+                    aui-select-field
     ${selectSizes[size]}
     bg-[var(--color-plain)]
     hover:bg-[var(--color-plain-hover)]

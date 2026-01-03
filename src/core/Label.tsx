@@ -18,7 +18,7 @@ export function Label({ size = "normal", id, text }: LabelProps) {
     return (
         <label
             htmlFor={id}
-            className={`${baseLabelClass} ${labelSizes[size]} text-[var(--color-text-secondary)]`}
+            className={`aui-label ${baseLabelClass} ${labelSizes[size]} text-[var(--color-text-secondary)]`}
         >
             {text}
         </label>
