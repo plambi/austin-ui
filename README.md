@@ -10,22 +10,14 @@ Components in this repo use Tailwind for styling, and use the css color variable
 
 Add this repo as a submodule into your existing repo using
 
--   git submodule add https://github.com/plambi/austin-ui.git components/austin-ui
+- git submodule add https://github.com/plambi/austin-ui.git components/austin-ui
 
 Then pull changes using
 
--   cd components/austin-ui
--   git pull origin main
+- cd components/austin-ui
+- git pull origin main
 
 ## Standards
 
--   All components use the same color and size types found in types.ts as configuration props. Some componenets do not have multiple colors, they all have sizes though.
--   I chose not to centralize the component Tailwind color definitions to prevent heavily polluting the namespace. However given that the text fields (number, area, and normal) all share classes, and the checkboxes also do I need a better standard for this.
--   Components that "choose" accept a "choice" and "setChoice" prop for updating your state variable
--   Components that "set" accept a "value" and "setValue" prop for updating your state variable
-
-## Issues
-
--   Remove duplicate definitions for checkbox color and size classes
--   Remove duplicate definitions for colors, and size of text, area, and number fields
--   CheckboxGroup and RadioGroup !compact spacing has incorrect click area
+- All components use the same color and size types found in types.ts as configuration props. Some componenets do not have multiple colors, they pretty much all have sizes though.
+- The vast majority of components have a class name of the form aui-select-field which can be then be overwritten in a css file within your project. Ensure to use !important so that overrides function correctly.

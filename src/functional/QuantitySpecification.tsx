@@ -69,7 +69,8 @@ export function QuantitySpecification({
 
     return (
         <div
-            className={`${className} bg-[var(--color-plain)]
+            className={`${className} qty-selector-container 
+            bg-[var(--color-plain)]
             disabled:bg-[var(--color-plain-disabled)]
             text-[var(--color-plain-overlay-text)]
             border border-[var(--color-plain-border)] 
@@ -79,6 +80,7 @@ export function QuantitySpecification({
             <div
                 onClick={onClickMinus}
                 className={`${iconContainerClass[size]} 
+                qty-selector-button
                 bg-[var(--color-plain)]
                 hover:bg-[var(--color-plain-hover)]
                 active:bg-[var(--color-plain-active)]
@@ -90,7 +92,7 @@ export function QuantitySpecification({
             <NumberField
                 overrideWidthFull
                 size={size}
-                className={`${inputClassName} ${numberFieldSizes[size]} text-center px-1`}
+                className={`${inputClassName} ${numberFieldSizes[size]} qty-selector-input text-center px-1`}
                 value={value.toString()}
                 setValue={(s: string) => {
                     const val = parseFloat(s);
@@ -110,6 +112,7 @@ export function QuantitySpecification({
             <div
                 onClick={onClickPlus}
                 className={`${iconContainerClass[size]} 
+                qty-selector-button
                 bg-[var(--color-plain)]
                 hover:bg-[var(--color-plain-hover)]
                 active:bg-[var(--color-plain-active)]

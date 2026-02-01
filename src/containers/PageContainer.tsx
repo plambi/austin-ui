@@ -24,7 +24,9 @@ export function PageContainer({
             {(title || description || leftTitleNode || rightTitleNode) && (
                 <div className="mb-6">
                     <div className="flex items-center justify-between w-full relative">
-                        <div className="flex-shrink-0">{leftTitleNode}</div>
+                        <div className="page-container-left-node flex-shrink-0">
+                            {leftTitleNode}
+                        </div>
 
                         {title && (
                             <h1 className={`page-container-header`}>{title}</h1>

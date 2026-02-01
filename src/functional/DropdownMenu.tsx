@@ -8,6 +8,7 @@ interface DropdownMenuProps {
     position?: "left" | "right" | "center";
     className?: string;
     menuClassName?: string;
+    forceClose?: number;
 }
 
 export function DropdownMenu({
@@ -16,9 +17,14 @@ export function DropdownMenu({
     position = "center",
     className = "",
     menuClassName = "",
+    forceClose,
 }: DropdownMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [forceClose]);
 
     // Close when clicking outside
     useEffect(() => {
