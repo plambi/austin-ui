@@ -4,11 +4,10 @@ import { AustinUISize, AustinUISizeClassMap } from "../types";
 import React from "react";
 import { Label } from "./Label";
 
-interface TextFieldProps
-    extends Omit<
-        React.InputHTMLAttributes<HTMLInputElement>,
-        "value" | "onChange" | "size"
-    > {
+interface TextFieldProps extends Omit<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    "value" | "onChange" | "size"
+> {
     size?: AustinUISize;
     overrideWidthFull?: boolean;
     label?: string;
@@ -40,7 +39,7 @@ export function TextField({
         bg-[var(--color-plain)]
         hover:bg-[var(--color-plain-hover)]
         disabled:bg-[var(--color-plain-disabled)]
-        border-[var(--color-plain-border)]
+        border border-[var(--color-plain-border)]
         appearance-none
     `;
 

@@ -11,7 +11,7 @@ export function Label({ size = "normal", id, text }: LabelProps) {
 
     const labelSizes: AustinUISizeClassMap = {
         small: "text-sm",
-        normal: "text-md",
+        normal: "text-[15px]",
         large: "text-lg",
     };
 

@@ -8,11 +8,10 @@ import {
     AustinUISizeClassMap,
 } from "../types";
 
-interface ButtonProps
-    extends Omit<
-        React.ButtonHTMLAttributes<HTMLButtonElement>,
-        "type" | "size"
-    > {
+interface ButtonProps extends Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    "type" | "size"
+> {
     variant?: AustinUIColor;
     size?: AustinUISize;
     overrideWidthFull?: boolean;
@@ -38,7 +37,7 @@ export function Button({
     const baseClasses = `${!overrideWidthFull ? "w-full" : ""} 
         ${disableHoverEffects ? "" : "hover:scale-[1.02]"}
         font-medium transition-all duration-200 
-        focus:outline-none cursor-pointer`;
+        focus:outline-none cursor-pointer border`;
 
     const buttonColors: AustinUIColorClassMap = {
         red: `
@@ -90,7 +89,7 @@ export function Button({
             onClick={onClick}
             disabled={disabled}
             formAction={formAction}
-            className={`${baseClasses} ${buttonColors[variant]} ${buttonSizes[size]} ${className}`}
+            className={`aui-button ${baseClasses} ${buttonColors[variant]} ${buttonSizes[size]} ${className}`}
         >
             {children}
         </button>

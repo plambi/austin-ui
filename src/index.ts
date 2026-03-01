@@ -26,6 +26,7 @@ export * from "./functional/Table";
 export * from "./functional/QuantitySpecification";
 export * from "./functional/ImageCarousel/ImageCarousel";
 export * from "./functional/Markdown/Markdown";
+export * from "./functional/Toast";
 
 // Showcase
 export * from "./showcase/UIShowcase";

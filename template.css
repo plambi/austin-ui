@@ -22,6 +22,10 @@
     --color-accent: #4a90e2;
     --color-accent-glow: rgba(74, 144, 226, 0.25);
 
+    /* Loading Spinner */
+    --color-spinner-background: rgba(255, 255, 255, 0.1);
+    --color-spinner-fill: #4b92e9;
+
     /* Blue */
     --color-blue: #4a6cff;
     --color-blue-hover: #3a5aee;
