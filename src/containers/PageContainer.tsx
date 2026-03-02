@@ -7,6 +7,7 @@ type PageContainerProps = {
     className?: string;
     leftTitleNode?: ReactNode;
     rightTitleNode?: ReactNode;
+    addMargin?: boolean;
 };
 
 export function PageContainer({
@@ -16,10 +17,11 @@ export function PageContainer({
     className,
     leftTitleNode,
     rightTitleNode,
+    addMargin,
 }: PageContainerProps) {
     return (
         <div
-            className={`max-w-5xl mx-auto flex flex-col space-y-6 p-6 ${className}`}
+            className={`max-w-5xl mx-auto flex flex-col space-y-6 p-6 ${addMargin ? "mt-3" : ""} ${className}`}
         >
             {(title || description || leftTitleNode || rightTitleNode) && (
                 <div className="mb-6">

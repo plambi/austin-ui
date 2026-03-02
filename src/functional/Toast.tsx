@@ -51,7 +51,7 @@ export function Toast({
 
     return (
         <div
-            className={`fixed bottom-5 right-5 z-50 
+            className={`fixed bottom-5 right-5 z-55 
                 flex items-center gap-3 rounded-[8px] p-4 
                 max-w-[300px] shadow-lg transition-all duration-500 border
                 ${colorClasses[color]}`}

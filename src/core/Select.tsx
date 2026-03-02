@@ -4,11 +4,10 @@ import React, { useId } from "react";
 import { AustinUISize, AustinUISizeClassMap, LabelValuePair } from "../types";
 import { Label } from "./Label";
 
-interface SelectProps
-    extends Omit<
-        React.SelectHTMLAttributes<HTMLSelectElement>,
-        "value" | "onChange" | "size" | "placeholder"
-    > {
+interface SelectProps extends Omit<
+    React.SelectHTMLAttributes<HTMLSelectElement>,
+    "value" | "onChange" | "size" | "placeholder"
+> {
     size?: AustinUISize;
     label?: string;
     options: LabelValuePair[];
@@ -45,7 +44,7 @@ export function Select({
     };
 
     return (
-        <div className="flex flex-col gap-1">
+        <div className="w-full flex flex-col gap-1">
             {label && <Label id={selectId} size={size} text={label} />}
             <select
                 {...rest}
