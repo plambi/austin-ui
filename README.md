@@ -6,6 +6,8 @@ This repo contains a collection of React components I have found myself repeated
 
 Components in this repo use Tailwind for styling, and use the css color variables found in template.css. Ensure that your globals.css file defines these colors and then change them however you see fit.
 
+    npm install react-responsive-carousel lucide-react
+
 # Installation
 
 Add this repo as a submodule into your existing repo using

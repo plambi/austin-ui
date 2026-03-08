@@ -3,6 +3,7 @@
 import React, { useId } from "react";
 import { AustinUISize, AustinUISizeClassMap, LabelValuePair } from "../types";
 import { Label } from "./Label";
+import { CircleAlert } from "lucide-react";
 
 interface SelectProps extends Omit<
     React.SelectHTMLAttributes<HTMLSelectElement>,
@@ -17,6 +18,8 @@ interface SelectProps extends Omit<
     ignoreDefaultValue?: boolean;
     className?: string;
     style?: React.CSSProperties;
+    error?: boolean;
+    errorMessage?: string;
 }
 
 export function Select({
@@ -29,6 +32,8 @@ export function Select({
     ignoreDefaultValue = false,
     className = "",
     style,
+    error,
+    errorMessage,
     ...rest
 }: SelectProps) {
     const selectSizes: AustinUISizeClassMap = {
@@ -36,6 +41,24 @@ export function Select({
         normal: "py-2 px-4 text-md rounded-lg",
         large: "py-3 px-6 text-lg rounded-lg",
     } as const;
+
+    const colorClass = error
+        ? `
+        bg-[var(--color-plain)]
+        hover:bg-[var(--color-plain-hover)]
+        disabled:bg-[var(--color-plain-disabled)]
+        border border-[var(--color-red-border)]
+    `
+        : `bg-[var(--color-plain)]
+        hover:bg-[var(--color-plain-hover)]
+        disabled:bg-[var(--color-plain-disabled)]
+        border border-[var(--color-plain-border)]`;
+
+    const errorTextSizes: AustinUISizeClassMap = {
+        small: "text-sm",
+        normal: "text-[15px]",
+        large: "text-lg",
+    };
 
     const selectId = useId();
 
@@ -53,16 +76,11 @@ export function Select({
                 onChange={handleChange}
                 className={`
                     aui-select-field
-    ${selectSizes[size]}
-    bg-[var(--color-plain)]
-    hover:bg-[var(--color-plain-hover)]
-    active:bg-[var(--color-plain-active)]
-    disabled:bg-[var(--color-plain-disabled)]
-    text-[var(--color-plain-overlay-text)]
-    border-[var(--color-plain-border)]
-    appearance-none
-    ${className}
-  `}
+                    ${selectSizes[size]}
+                    ${colorClass}
+                    appearance-none
+                    ${className}
+                `}
                 style={{
                     WebkitAppearance: "none",
                     MozAppearance: "none",
@@ -86,6 +104,22 @@ export function Select({
                     </option>
                 ))}
             </select>
+
+            {error && (
+                <div className="w-full flex flex-row items-center gap-1">
+                    <CircleAlert
+                        width={20}
+                        height={20}
+                        color="var(--color-red)"
+                    />
+
+                    <p
+                        className={`${errorTextSizes[size]} text-[var(--color-red)]`}
+                    >
+                        {errorMessage}
+                    </p>
+                </div>
+            )}
         </div>
     );
 }
