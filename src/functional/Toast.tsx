@@ -57,7 +57,7 @@ export function Toast({
                 ${colorClasses[color]}`}
             role="alert"
         >
-            <div className="flex flex-col gap-3 text-wrap break-all">
+            <div className="flex flex-col gap-1 text-wrap break-all">
                 <p className="text-lg font-bold">{header}</p>
                 <p className="text-md">{body}</p>
             </div>
