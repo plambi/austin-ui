@@ -3,6 +3,7 @@ import { Trash2 } from "lucide-react";
 // import Link from 'next/link';
 
 type TableProps = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data: Record<string, any[]>;
     rowHrefs?: string[]; // New prop for row links
     functionColumn?: {
@@ -15,7 +16,7 @@ export function Table({ data, rowHrefs, functionColumn }: TableProps) {
     const headers = Object.keys(data);
     const dataLists = Object.values(data);
     const longestListLength = dataLists.reduce((a, b) =>
-        b.length > a.length ? b : a
+        b.length > a.length ? b : a,
     ).length;
 
     return (
